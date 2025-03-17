@@ -41,10 +41,11 @@ public class StatsService {
     }
 
     public int lessThanAvg(long[] sales) {
+        double average = avgSales(sales);
         int month = 0;
 
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] < avgSales(sales)) {
+            if (sales[i] < average) {
                 month++;
             }
         }
@@ -52,10 +53,11 @@ public class StatsService {
     }
 
     public int moreThanAvg(long[] sales) {
+        double average = avgSales(sales);
         int month = 0;
 
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] > avgSales(sales)) {
+            if (sales[i] > average) {
                 month++;
             }
         }
